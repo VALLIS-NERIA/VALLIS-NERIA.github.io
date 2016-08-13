@@ -19,12 +19,18 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  left: 400px;
+  left: 25%;
   bottom: 0;
   height: 100%;
   padding: 20px 40px 0;
   overflow: auto;
   word-wrap: break-word;
+}
+@media all and (max-width: 1400px) {
+  .main-content {
+    margin-left: 0px;
+    left: 350px;
+  }
 }
 .main-footer {
   padding: 20px 0;

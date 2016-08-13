@@ -8,23 +8,16 @@
 
 <title>
   
-    Hello World
+    标签: web, css
   
 </title>
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/08/12/hello-world/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第239人类研究所">
+<meta property="og:url" content="http://yoursite.com/tags/web-css/index.html">
 <meta property="og:site_name" content="第239人类研究所">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-08-12T13:41:45.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="第239人类研究所">
 
 
   <link rel="alternative" href="/atom.xml" title="第239人类研究所" type="application/atom+xml">
@@ -124,80 +117,81 @@ Quick">
       
         <div style="max-width: 1000px">
       
-          <article id="post-hello-world" class="article article-type-post">
+          <h1>web, css</h1>
+
+
   
-    <h1 class="article-header">
-      Hello World
-    </h1>
   
+    <div class="post-list">
   
 
-  <div class="article-info">
-    <span class="article-date">
-  2016-08-12
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/08/13/css笔记/" >
+  css笔记
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/08/13/css笔记/"><span class="article-date">
+  2016-08-13
 </span>
-
-    
-
-    
-
-  </div>
-  <div class="article-entry">
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
+</a>
         
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
-      </span>
-    </a>
-  </div>
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-css/">web, css</a></li></ul>
+	</span>
 
 
-    
+      </div>
+      <div class="article-entry">
+        
+          <p>当下流行页面左边放个sidebar的左右两栏的设计，大多数情况下左右两栏的宽度用百分比决定，比如这个blog就是这样的：</p>
+<pre><code>.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    min-width: 350px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    text-align: right;
+}
 
-  </footer>
-</article>
+.main-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 25%;
+    bottom: 0;
+    height: 100%;
+    padding: 20px 40px 0;
+    overflow: auto;
+    word-wrap: break-word;
+}
+</code></pre><p>当遇到低分辨率的情况时，25%的sidebar可能不足以显示所有内容，所以sidebar加了一个min-width的条目。但是右侧内容区的左侧定位却并没有min-left这样的属性，那么该如何实现？<br>只要在其后添加如下代码（CSS3+）:</p>
+<pre><code>@media all and (max-width: 1400px) {
+    .main-content {
+        margin-left: 0px;
+        left: 350px;
+    }
+}
+</code></pre><p>当当前显示分辨率小于1400px时，下面的样式会自动override上面的样式，从而达到脑补中min-left的感觉。</p>
 
+        
+      </div>
+    </div>
 
-  <link rel="stylesheet" href="http://static.duoshuo.com/styles/embed.default.css?349d9313.css">
-  <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2016/08/12/hello-world/" data-title="Hello World" data-url="/2016/08/12/hello-world/"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-  <script type="text/javascript">
-    var duoshuoQuery = {
-      short_name: "ustc239"
-    };
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';
-      ds.async = true;
-      ds.src = (document.location.protocol == 'https:'
-        ? 'https:'
-        : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-  <!-- 多说公共JS代码 end -->
+  
+    </div>
+  
 
 
 

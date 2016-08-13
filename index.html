@@ -86,14 +86,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">标签</a>
-                
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-css/">web, css</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">归档</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">3</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">4</span></li></ul>
               </li>
             
           
@@ -118,6 +118,79 @@
         <div style="max-width: 1000px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/08/13/css笔记/" >
+  css笔记
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/08/13/css笔记/"><span class="article-date">
+  2016-08-13
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-css/">web, css</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>当下流行页面左边放个sidebar的左右两栏的设计，大多数情况下左右两栏的宽度用百分比决定，比如这个blog就是这样的：</p>
+<pre><code>.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    min-width: 350px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    text-align: right;
+}
+
+.main-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 25%;
+    bottom: 0;
+    height: 100%;
+    padding: 20px 40px 0;
+    overflow: auto;
+    word-wrap: break-word;
+}
+</code></pre><p>当遇到低分辨率的情况时，25%的sidebar可能不足以显示所有内容，所以sidebar加了一个min-width的条目。但是右侧内容区的左侧定位却并没有min-left这样的属性，那么该如何实现？<br>只要在其后添加如下代码（CSS3+）:</p>
+<pre><code>@media all and (max-width: 1400px) {
+    .main-content {
+        margin-left: 0px;
+        left: 350px;
+    }
+}
+</code></pre><p>当当前显示分辨率小于1400px时，下面的样式会自动override上面的样式，从而达到脑补中min-left的感觉。</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
