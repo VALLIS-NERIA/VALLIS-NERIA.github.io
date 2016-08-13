@@ -160,7 +160,8 @@
 @media mq-mobile {
   .sidebar {
     left: -400px;
-    width: 300px;
+    width: auto;
+    min-width: 200px;
     max-width: 100%;
     z-index: 9999999;
     transition-duration: 0.3s;
@@ -170,6 +171,7 @@
   }
   .sidebar .header {
     padding-right: 15px;
+    padding-left: 60px;
   }
   .sidebar .title {
     display: none;
