@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/13/css笔记/index.html">
 <meta property="og:site_name" content="第239人类研究所">
 <meta property="og:description" content="大家都喜欢页面分成左右两栏，百分比width和min-width设置左栏用了都说好，但是右栏可没有min-left属性，该怎么办？">
-<meta property="og:updated_time" content="2016-08-13T06:37:55.804Z">
+<meta property="og:updated_time" content="2016-10-24T09:33:20.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css笔记">
 <meta name="twitter:description" content="大家都喜欢页面分成左右两栏，百分比width和min-width设置左栏用了都说好，但是右栏可没有min-left属性，该怎么办？">
@@ -145,39 +145,10 @@
     <p>大家都喜欢页面分成左右两栏，百分比width和min-width设置左栏用了都说好，但是右栏可没有min-left属性，该怎么办？</p>
 <a id="more"></a>
 <p>当下流行页面左边放个sidebar的左右两栏的设计，大多数情况下左右两栏的宽度用百分比决定，比如这个blog就是这样的：</p>
-<pre><code>.sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 25%;
-    min-width: 350px;
-    height: 100%;
-    overflow: hidden;
-    background-color: #333;
-    color: white;
-    text-align: right;
-}
-
-.main-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 25%;
-    bottom: 0;
-    height: 100%;
-    padding: 20px 40px 0;
-    overflow: auto;
-    word-wrap: break-word;
-}
-</code></pre><p>当遇到低分辨率的情况时，25%的sidebar可能不足以显示所有内容，所以sidebar加了一个min-width的条目。但是右侧内容区的左侧定位却并没有min-left这样的属性，那么该如何实现？<br>只要在其后添加如下代码（CSS3+）:</p>
-<pre><code>@media all and (max-width: 1400px) {
-    .main-content {
-        margin-left: 0px;
-        left: 350px;
-    }
-}
-</code></pre><p>当当前显示分辨率小于1400px时，下面的样式会自动override上面的样式，从而达到脑补中min-left的感觉。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.sidebar</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">25%</span>;</div><div class="line">    <span class="attribute">min-width</span>: <span class="number">350px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#333</span>;</div><div class="line">    <span class="attribute">color</span>: white;</div><div class="line">    <span class="attribute">text-align</span>: right;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.main-content</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">25%</span>;</div><div class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">40px</span> <span class="number">0</span>;</div><div class="line">    <span class="attribute">overflow</span>: auto;</div><div class="line">    <span class="attribute">word-wrap</span>: break-word;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>遇到低分辨率的情况时，25%的sidebar可能不足以显示所有内容，所以sidebar加了一个min-width的条目。但是右侧内容区的左侧定位却并没有min-left这样的属性，那么该如何实现？<br>只要在其后添加如下代码（CSS3+）:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> all and (max-width: <span class="number">1400px</span>) &#123;</div><div class="line">    <span class="selector-class">.main-content</span> &#123;</div><div class="line">        <span class="attribute">margin-left</span>: <span class="number">0px</span>;</div><div class="line">        <span class="attribute">left</span>: <span class="number">350px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当前显示分辨率小于1400px时，下面的样式会自动override上面的样式，从而达到脑补中min-left的感觉。</p>
 
   </div>
   <footer class="article-footer">
