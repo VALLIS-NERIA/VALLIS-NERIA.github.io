@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/10/24/魔改/index.html">
 <meta property="og:site_name" content="第239人类研究所">
 <meta property="og:description" content="jubeat HDD 中，tex文件的结构。">
-<meta property="og:updated_time" content="2016-10-24T09:30:12.268Z">
+<meta property="og:updated_time" content="2016-12-09T01:48:38.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="魔改">
 <meta name="twitter:description" content="jubeat HDD 中，tex文件的结构。">
@@ -88,14 +88,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">标签</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音游/">音游</a><span class="tag-list-count">1</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画-acg/">动画, acg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音游/">音游</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">归档</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">5</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">6</span></li></ul>
               </li>
             
           
@@ -148,7 +148,13 @@
 
   </div>
   <div class="article-entry">
-    <p>jubeat HDD 中，tex文件的结构。<br><a id="more"></a><br>别急</p>
+    <p>jubeat HDD 中，tex文件的结构。<br><a id="more"></a><br>大体结构：固定长度文件头+每个文件的地址和长度（map）+每个文件的文件名+每个文件名的校验和</p>
+<p>最后是各个文件依次存放。每个文件在正文开始前有两个双字，分别以little endian存放了该文件的大小和该文件解压后的大小。</p>
+<p>文件用lzss算法压缩。</p>
+<p>解压出来的图像文件有3种格式，第一种本垃圾看不懂，怀疑是某种神秘的图像压缩方式</p>
+<p>第二种是RGBA的位图</p>
+<p>第三种是只存了Alpha的位图（copious以前的歌曲名字是这么存的）</p>
+<p>对于saucer及以后的版本而言，似乎都是第二种格式了</p>
 
   </div>
   <footer class="article-footer">
