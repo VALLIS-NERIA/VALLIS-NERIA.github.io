@@ -8,20 +8,66 @@
 
 <title>
   
-    魔改
+    名学之2
   
 </title>
 
-<meta name="description" content="jubeat HDD 中，tex文件的结构。">
+<meta name="description" content="丝带？OP：两人背靠背，分别迈步向前时，环绕着他们的红线；
+
+第一次交换身体：泷in三叶梦到了3年前和三叶相见一幕，随后惊醒；
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+飞弹旅馆：泷忘记了要寻找的人的名字。奥寺提到了他的腕带，唤醒他对产灵和神体的记忆；
+飞弹旅馆，趴在桌上睡着的泷：
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+同时镜头指向腕带；
+喝下口嚼酒，经历幻境时：洞窟壁画上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="魔改">
-<meta property="og:url" content="http://yoursite.com/2016/10/24/魔改/index.html">
+<meta property="og:title" content="名学之2">
+<meta property="og:url" content="http://yoursite.com/2016/12/10/kimi-no-na-wa-2/index.html">
 <meta property="og:site_name" content="第239人类研究所">
-<meta property="og:description" content="jubeat HDD 中，tex文件的结构。">
-<meta property="og:updated_time" content="2016-12-09T01:48:38.705Z">
+<meta property="og:description" content="丝带？OP：两人背靠背，分别迈步向前时，环绕着他们的红线；
+
+第一次交换身体：泷in三叶梦到了3年前和三叶相见一幕，随后惊醒；
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+飞弹旅馆：泷忘记了要寻找的人的名字。奥寺提到了他的腕带，唤醒他对产灵和神体的记忆；
+飞弹旅馆，趴在桌上睡着的泷：
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+同时镜头指向腕带；
+喝下口嚼酒，经历幻境时：洞窟壁画上">
+<meta property="og:image" content="http://yoursite.com/1.JPG">
+<meta property="og:image" content="http://yoursite.com/2_0.jpg">
+<meta property="og:image" content="http://yoursite.com/2_1.jpg">
+<meta property="og:image" content="http://yoursite.com/2.jpg">
+<meta property="og:image" content="http://yoursite.com/3_1.jpg">
+<meta property="og:image" content="http://yoursite.com/3_2.jpg">
+<meta property="og:image" content="http://yoursite.com/3_3.jpg">
+<meta property="og:image" content="http://yoursite.com/3_4.jpg">
+<meta property="og:image" content="http://yoursite.com/4.jpg">
+<meta property="og:updated_time" content="2016-12-10T11:48:10.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="魔改">
-<meta name="twitter:description" content="jubeat HDD 中，tex文件的结构。">
+<meta name="twitter:title" content="名学之2">
+<meta name="twitter:description" content="丝带？OP：两人背靠背，分别迈步向前时，环绕着他们的红线；
+
+第一次交换身体：泷in三叶梦到了3年前和三叶相见一幕，随后惊醒；
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+飞弹旅馆：泷忘记了要寻找的人的名字。奥寺提到了他的腕带，唤醒他对产灵和神体的记忆；
+飞弹旅馆，趴在桌上睡着的泷：
+
+「瀧くん、瀧くん、瀧くん、おぼえて……ない？」
+
+同时镜头指向腕带；
+喝下口嚼酒，经历幻境时：洞窟壁画上">
+<meta name="twitter:image" content="http://yoursite.com/1.JPG">
 
 
   <link rel="alternative" href="/atom.xml" title="第239人类研究所" type="application/atom+xml">
@@ -125,36 +171,56 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-魔改" class="article article-type-post">
+          <article id="post-kimi-no-na-wa-2" class="article article-type-post">
   
     <h1 class="article-header">
-      魔改
+      名学之2
     </h1>
   
   
 
   <div class="article-info">
     <span class="article-date">
-  2016-10-24
+  2016-12-10
 </span>
 
     
 
     
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音游/">音游</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动画-acg/">-动画 -acg</a></li></ul>
 	</span>
 
 
   </div>
   <div class="article-entry">
-    <p>jubeat HDD 中，tex文件的结构。<br><a id="more"></a><br>大体结构：固定长度文件头+每个文件的地址和长度（map）+每个文件的文件名+每个文件名的校验和</p>
-<p>最后是各个文件依次存放。每个文件在正文开始前有两个双字，分别以little endian存放了该文件的大小和该文件解压后的大小。</p>
-<p>文件用lzss算法压缩。</p>
-<p>解压出来的图像文件有3种格式，第一种本垃圾看不懂，怀疑是某种神秘的图像压缩方式</p>
-<p>第二种是RGBA的位图</p>
-<p>第三种是只存了Alpha的位图（copious以前的歌曲名字是这么存的）</p>
-<p>对于saucer及以后的版本而言，似乎都是第二种格式了</p>
+    <h2 id="丝带？"><a href="#丝带？" class="headerlink" title="丝带？"></a>丝带？</h2><p>OP：两人背靠背，分别迈步向前时，环绕着他们的红线；</p>
+<p><img src="1.JPG" alt=""></p>
+<p>第一次交换身体：泷in三叶梦到了3年前和三叶相见一幕，随后惊醒；</p>
+<blockquote>
+<p><em>「瀧くん、瀧くん、瀧くん、おぼえて……ない？」</em></p>
+</blockquote>
+<p>飞弹旅馆：泷忘记了要寻找的人的名字。奥寺提到了他的腕带，唤醒他对产灵和神体的记忆；</p>
+<p>飞弹旅馆，趴在桌上睡着的泷：</p>
+<blockquote>
+<p><em>「瀧くん、瀧くん、瀧くん、おぼえて……ない？」</em></p>
+</blockquote>
+<p>同时镜头指向腕带；</p>
+<p>喝下口嚼酒，经历幻境时：洞窟壁画上的彗星化为红线，一直连到腕带，红线又变成彗星；</p>
+<p><img src="2_0.jpg" alt=""></p>
+<p><img src="2_1.jpg" alt=""></p>
+<p>三叶爹离家后，一直连到宫水家纺线机上；</p>
+<p><img src="2.jpg" alt=""></p>
+<p>逢魔时刻：两人在不同位面错身而过时，短暂几帧内浮现的红线和“叮”的一声；</p>
+<p><img src="3_1.jpg" alt=""></p>
+<p><img src="3_2.jpg" alt=""></p>
+<p><img src="3_3.jpg" alt=""></p>
+<p><img src="3_4.jpg" alt=""></p>
+<p>2021，地铁：泷不知何时有了看右手的习惯，是在寻找没写完的“み”的一横，还是在寻找一条红色腕带？</p>
+<p>泷面试，白天：在地铁上，看到对面女子的背影上系着的红头绳，背景中“叮”了一下，慌忙冲下列车；</p>
+<p><img src="4.jpg" alt=""></p>
+<p>雪夜桥上：泷回了头，但红头绳被三叶撑的伞挡住了；</p>
+<p>最后我们复习一下一叶婆婆的话：丝线聚在一起，成型、扭曲、缠绕，有时又还原、断裂、再次连接，这就是产灵，这就是时间。</p>
 
   </div>
   <footer class="article-footer">
@@ -182,7 +248,7 @@
 
   <link rel="stylesheet" href="http://static.duoshuo.com/styles/embed.default.css?349d9313.css">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2016/10/24/魔改/" data-title="魔改" data-url="/2016/10/24/魔改/"></div>
+  <div class="ds-thread" data-thread-key="2016/12/10/kimi-no-na-wa-2/" data-title="名学之2" data-url="/2016/12/10/kimi-no-na-wa-2/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
