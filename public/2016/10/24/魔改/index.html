@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    魔改
+  
+</title>
+
+<meta name="description" content="jubeat HDD 中，tex文件的结构。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="魔改">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/魔改/index.html">
+<meta property="og:site_name" content="第239人类研究所">
+<meta property="og:description" content="jubeat HDD 中，tex文件的结构。">
+<meta property="og:updated_time" content="2016-12-09T01:48:38.705Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="魔改">
+<meta name="twitter:description" content="jubeat HDD 中，tex文件的结构。">
+
+
+  <link rel="alternative" href="/atom.xml" title="第239人类研究所" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+</head>
+<body
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">第239人类研究所</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">第239人类研究所</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">Venn</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="/images/eririchan256.png"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">分类</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">标签</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/acg/">acg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音游/">音游</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">8</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/VALLIS-NERIA" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://osu.ppy.sh/u/4247826" title="esu!" target="_blank" rel="external">esu!</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-魔改" class="article article-type-post">
+  
+    <h1 class="article-header">
+      魔改
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2016-10-24
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音游/">音游</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <p>jubeat HDD 中，tex文件的结构。<br><a id="more"></a><br>大体结构：固定长度文件头+每个文件的地址和长度（map）+每个文件的文件名+每个文件名的校验和</p>
+<p>最后是各个文件依次存放。每个文件在正文开始前有两个双字，分别以little endian存放了该文件的大小和该文件解压后的大小。</p>
+<p>文件用lzss算法压缩。</p>
+<p>解压出来的图像文件有3种格式，第一种本垃圾看不懂，怀疑是某种神秘的图像压缩方式</p>
+<p>第二种是RGBA的位图</p>
+<p>第三种是只存了Alpha的位图（copious以前的歌曲名字是这么存的）</p>
+<p>对于saucer及以后的版本而言，似乎都是第二种格式了</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+  <link rel="stylesheet" href="https://static.duoshuo.com/styles/embed.default.css?349d9313.css">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/10/24/魔改/" data-title="魔改" data-url="/2016/10/24/魔改/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {
+      short_name: "ustc239"
+    };
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';
+      ds.async = true;
+      ds.src = (document.location.protocol == 'https:'
+        ? 'https:'
+        : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2016 第239人类研究所 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
